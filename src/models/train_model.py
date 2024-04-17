@@ -93,6 +93,8 @@ def evaluate_model(model, X_test, y_test):
         'f1': f1
     }
     
+    roc_curve(y_test, model.predict_proba(X_test)[:, 1], model_name=f"{type(model).__name__}_roc_curve")
+    
     return metrics
 
 def export_model(model, directory='models/'):

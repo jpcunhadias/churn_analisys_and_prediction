@@ -241,7 +241,6 @@ def roc_curve(y_test, y_pred_prob, model_name=''):
     plt.ylabel('True Positive Rate')
     plt.title('ROC Curve')
     plt.legend()
-    plt.show()
     
     save_figures([plt.gcf()], f'models/{model_name}/roc_curve')
 

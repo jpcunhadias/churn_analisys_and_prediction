@@ -1,55 +1,93 @@
-churn_analysis_and_prediction
-==============================
 
-A data science project that analysis client data and predicts the churn probability based on their purchase  profile in a telecommunications company
+# Análise e predição de Churn
 
-Project Organization
+Um projeto de ciência de dados que analisa dados de clientes e prevê a probabilidade de churn com base em seu perfil de compra em uma empresa de telecomunicações
+
+- Você encontrará a modelagem e análise exploratória dos dados na pasta de notebooks
+
+- No projeto, tem-se outras pastas como a de reports que está com as figuras das referentes análises salvas, como também o pipeline de treinamento que é importado no arquivo main.py
+
+
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone https://link-para-o-projeto
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd my-project
+```
+
+Instale as dependências
+
+```bash
+  pip install -r requirements.txt
+```
+
+## **Insira os [dados utilizados](https://docs.google.com/spreadsheets/d/1hyNndE4QVhjVLmB37ePBURRUkBlFUMJ3g6wlH2UenJY/edit#gid=516785925) na pasta data/raw**
+
+Execute o arquivo main.py no diretório do projeto
+
+```bash
+  python main.py
+```
+
+
+## Rodando os testes
+
+Para rodar os testes, rode o seguinte comando
+
+```bash
+  pytest
+```
+- Para mais informações: [pytest](https://docs.pytest.org/en/8.0.x/)
+
+
+Organização do Projeto
 ------------
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
+    ├── README.md          <- O README de nível superior para desenvolvedores que usam este projeto.
     ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
+    │   ├── external       <- Dados de fontes de terceiros.
+    │   ├── interim        <- Dados intermediários que foram transformados.
+    │   ├── processed      <- Os conjuntos de dados finais e canônicos para modelagem.
+    │   └── raw            <- O dump de dados original e imutável.
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+    ├── models             <- Modelos treinados e serializados, previsões de modelos ou resumos de modelos
     │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
+    ├── notebooks          <- Notebooks Jupyter. A convenção de nomenclatura é um número (para ordenação),
+    │                         as iniciais do criador, e uma descrição curta delimitada por `-`, por exemplo,
+    │                         `1.0-jqp-exploracao-inicial-dos-dados`.
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    ├── references         <- Dicionários de dados, manuais e todos os outros materiais explicativos.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+    ├── reports            <- Análises geradas como HTML, PDF, LaTeX, etc.
+    │   └── figures        <- Gráficos e figuras geradas para serem usadas nos relatórios
     │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
+    ├── requirements.txt   <- O arquivo de requisitos para reproduzir o ambiente de análise, por exemplo, gerado com `pip freeze > requirements.txt`
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    ├── src                <- Código fonte para uso neste projeto.
+    │   ├── __init__.py    <- Torna src um módulo Python
     │   │
-    │   ├── data           <- Scripts to download or generate data
+    │   ├── data           <- Scripts para baixar ou gerar dados
     │   │   └── make_dataset.py
     │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
+    │   ├── features       <- Scripts para transformar dados brutos em recursos para modelagem
     │   │   └── build_features.py
     │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
+    │   ├── models         <- Scripts para treinar modelos e, em seguida, usar modelos treinados para fazer
+    │   │   │                 previsões
     │   │   ├── predict_model.py
     │   │   └── train_model.py
     │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+    │   └── visualization  <- Scripts para criar visualizações exploratórias e orientadas a resultados
     │       └── visualize.py
     │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    └── tests    <- testes para verificar a consistência do fluxo de trabalho
 
 
 --------
