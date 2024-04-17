@@ -3,7 +3,7 @@
 
 Um projeto de ciência de dados que analisa dados de clientes e prevê a probabilidade de churn com base em seu perfil de compra em uma empresa de telecomunicações
 
-- Você encontrará a modelagem e análise exploratória dos dados na pasta de notebooks
+- Você encontrará a modelagem e análise exploratória dos dados na pasta de notebooks. Ao inserir os dados no diretório descrito nas etapas abaixo e preparar o ambiente, o usuário pode executar todas as células e checar as anotações.
 
 - No projeto, tem-se outras pastas como a de reports que está com as figuras das referentes análises salvas, como também o pipeline de treinamento que é importado no arquivo main.py
 
