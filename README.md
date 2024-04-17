@@ -28,7 +28,7 @@ Instale as dependências
   pip install -r requirements.txt
 ```
 
-## **Insira os [dados utilizados](https://docs.google.com/spreadsheets/d/1hyNndE4QVhjVLmB37ePBURRUkBlFUMJ3g6wlH2UenJY/edit#gid=516785925) na pasta data/raw**
+- ## **Crie o diretório DATA apresentado na estrutura abaixo e insira os [dados utilizados](https://docs.google.com/spreadsheets/d/1hyNndE4QVhjVLmB37ePBURRUkBlFUMJ3g6wlH2UenJY/edit#gid=516785925) no diretório data/raw**
 
 Execute o arquivo main.py no diretório do projeto
 
