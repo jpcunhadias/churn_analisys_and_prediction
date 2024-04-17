@@ -50,7 +50,7 @@ Para rodar os testes, rode o seguinte comando
 Organização do Projeto
 ------------
 
-    ├── README.md          <- O README de nível superior para desenvolvedores que usam este projeto.
+    ├── README.md          <- O README para desenvolvedores que usarem este projeto.
     ├── data
     │   ├── external       <- Dados de fontes de terceiros.
     │   ├── interim        <- Dados intermediários que foram transformados.
