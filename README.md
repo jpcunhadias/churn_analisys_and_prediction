@@ -1,5 +1,6 @@
 
 # Análise e predição de Churn
+- Python 3.9.19
 
 Um projeto de ciência de dados que analisa dados de clientes e prevê a probabilidade de churn com base em seu perfil de compra em uma empresa de telecomunicações
 
