@@ -7,7 +7,7 @@ project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..
 sys.path.append(project_root)
 
 from src.features.build_features import build_features
-from src.visualization.visualize import save_figures, roc_curve
+from src.visualization.visualize import roc_curve, confusion_matrix
 
 def train_test_split_data(data, target='Churn', test_size=0.2, random_state=42):
     """
@@ -94,6 +94,7 @@ def evaluate_model(model, X_test, y_test):
     }
     
     roc_curve(y_test, model.predict_proba(X_test)[:, 1], model_name=f"{type(model).__name__}_roc_curve")
+    confusion_matrix(y_test, y_pred, model_name=f"{type(model).__name__}_confusion_matrix")
     
     return metrics
 
@@ -132,12 +133,8 @@ if __name__ == '__main__':
     X_train, X_test, y_train, y_test = train_test_split_data(data)
     model = train_model(X_train, y_train)
     metrics = evaluate_model(model, X_test, y_test)
-    
-    y_pred_prob = model.predict_proba(X_test)[:, 1]
-    roc_curve(y_test, y_pred_prob, model_name=f"{type(model).__name__}_roc_curve")
-    
     export_model(model)
     
     print(metrics)
-    
+
     print('Model trained and saved successfully.')

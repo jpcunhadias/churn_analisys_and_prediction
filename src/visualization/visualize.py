@@ -244,6 +244,30 @@ def roc_curve(y_test, y_pred_prob, model_name=''):
     
     save_figures([plt.gcf()], f'models/{model_name}/roc_curve')
 
+def confusion_matrix(y_test, y_pred, model_name=''):
+    """
+    Plot the confusion matrix.
+    
+    Parameters
+    ----------
+    y_test : array-like
+        True labels.
+    y_pred : array-like
+        Predicted labels.
+    
+    Returns
+    -------
+    None
+    """
+    from sklearn.metrics import confusion_matrix
+    from sklearn.metrics import ConfusionMatrixDisplay
+    
+    cm = confusion_matrix(y_test, y_pred)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+    disp.plot()
+    
+    save_figures([plt.gcf()], f'models/{model_name}/confusion_matrix')
+
 if __name__ == "__main__":
     # Load your data
     data = pd.read_excel('data/raw/customer-churn.xlsx')
